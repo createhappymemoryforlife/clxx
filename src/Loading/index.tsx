@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
-import React from "react";
-import ReactDOM from "react-dom";
-import { Wrapper, LoadingWrapperProps } from "./Wrapper";
-import { is } from "../utils/is";
-import omit from "lodash/omit";
+import { jsx } from '@emotion/core';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Wrapper, LoadingWrapperProps } from './Wrapper';
+import { is } from '../utils/is';
+import omit from 'lodash/omit';
 
 export interface LoadingOption extends LoadingWrapperProps {
   // loading最小持续时间，默认为1000毫秒
@@ -39,7 +39,7 @@ export class Loading {
     }
 
     // 获取传递给容器的属性
-    this.wrapperProps = omit(this.config, ["minDuration"]);
+    this.wrapperProps = omit(this.config, ['minDuration']);
 
     // 显示loading
     this.show();
@@ -55,10 +55,10 @@ export class Loading {
     this.startShowTime = Date.now();
 
     if (!this.container) {
-      this.container = document.createElement("div");
+      this.container = document.createElement('div');
       document.body.appendChild(this.container);
     }
-    this.wrapperProps.state = "show";
+    this.wrapperProps.state = 'show';
     ReactDOM.render(<Wrapper {...this.wrapperProps} />, this.container!);
   }
 
@@ -76,13 +76,13 @@ export class Loading {
         const left = this.config.minDuration! - continuedTime;
         await new Promise((resolve) => {
           window.setTimeout(() => {
-            resolve();
+            resolve(0);
           }, left);
         });
       }
 
       // 时间已经达到了，开始关闭
-      this.wrapperProps.state = "hide";
+      this.wrapperProps.state = 'hide';
       this.wrapperProps.onHide = () => {
         ReactDOM.unmountComponentAtNode(this.container!);
         this.container!.remove();

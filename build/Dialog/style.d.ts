@@ -1,0 +1,20 @@
+export declare const containerHide: import("@emotion/serialize").Keyframes;
+export declare const style: {
+    duration(duration?: string | number): import("@emotion/utils").SerializedStyles;
+    containerShow: import("@emotion/utils").SerializedStyles;
+    containerHide: import("@emotion/utils").SerializedStyles;
+    pullUpShow: import("@emotion/utils").SerializedStyles;
+    pullUpHide: import("@emotion/utils").SerializedStyles;
+    pullDownShow: import("@emotion/utils").SerializedStyles;
+    pullDownHide: import("@emotion/utils").SerializedStyles;
+    pullLeftShow: import("@emotion/utils").SerializedStyles;
+    pullLeftHide: import("@emotion/utils").SerializedStyles;
+    pullRightShow: import("@emotion/utils").SerializedStyles;
+    pullRightHide: import("@emotion/utils").SerializedStyles;
+    dialogShow: import("@emotion/utils").SerializedStyles;
+    dialogHide: import("@emotion/utils").SerializedStyles;
+    pullUp: import("@emotion/utils").SerializedStyles;
+    pullDown: import("@emotion/utils").SerializedStyles;
+    pullLeft: import("@emotion/utils").SerializedStyles;
+    pullRight: import("@emotion/utils").SerializedStyles;
+};
